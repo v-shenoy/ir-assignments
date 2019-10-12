@@ -76,7 +76,8 @@ if __name__ == "__main__":
             song_json = json.load(song_file)
         
 
-        terms = generate_terms(song_json["song_name"])
+        terms = generate_terms(song_json["song_name"]) * 3
+        terms.extend(generate_terms(song_json["artist_name"]) * 5)
         terms.extend(generate_terms(song_json["lyrics"]))
 
         unique_terms = list(set(terms))
