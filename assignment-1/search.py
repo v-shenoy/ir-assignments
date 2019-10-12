@@ -56,6 +56,7 @@ if __name__ == "__main__":
     for (idx, file_name) in enumerate(corpus):
         if file_name == "vocab.json":
             continue
+        
         song_json = None
         with open(file_name, "r") as song_file:
             song_json = json.load(song_file)

@@ -18,10 +18,15 @@ def generate_terms(doc_text):
 
     terms = [stemmer.stem(word).lower() for word in words]
 
+    biwords = []
+    for idx in range(1, len(terms)):
+        biwords.append(terms[idx-1] + " " + terms[idx])
+
+    terms.extend(biwords)
     return terms
 
 
-def save_serialized_vector(vocab_json_):
+def save_weight(vocab_json_):
     corpus = os.listdir(os.getcwd())
     corpus_size = len(corpus)
 
@@ -29,6 +34,9 @@ def save_serialized_vector(vocab_json_):
     inv_doc_freq = np.log(corpus_size/(1+doc_freq))
 
     for file_name in corpus:
+        if file_name == "vocab.json":
+            continue
+
         song_json = None
         with open(file_name, "r") as song_file:
             song_json = json.load(song_file)
@@ -41,6 +49,7 @@ def save_serialized_vector(vocab_json_):
             doc_vec[idx] = term_freq.get(key, 0) 
 
         doc_vec = np.log(1 + doc_vec)
+        doc_vec = doc_vec * inv_doc_freq
         song_json["mod"] = doc_vec.dot(doc_vec) ** 0.5
         
         with open(file_name, "w") as output_file:
@@ -59,7 +68,9 @@ if __name__ == "__main__":
     vocab_json = defaultdict(int)
 
     for file_name in os.listdir(os.getcwd()):
-
+        if file_name == "vocab.json":
+            continue
+        
         song_json = None
         with open(file_name, "r") as song_file:
             song_json = json.load(song_file)
@@ -80,7 +91,7 @@ if __name__ == "__main__":
             json.dump(song_json, output_file, indent = 2, ensure_ascii = False)
 
 
-    save_serialized_vector(vocab_json)
+    save_weight(vocab_json)
 
     with open("vocab.json", "w") as output_file:
         json.dump(vocab_json, output_file, indent = 2, ensure_ascii = False)
