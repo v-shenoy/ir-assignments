@@ -1,3 +1,7 @@
+''' 
+Module responsibly for performing the search using the query,
+and the cosine similarity measure. '''
+
 import string
 import math
 import os
@@ -12,7 +16,14 @@ import preprocessor
 json_list = None
 vocab_json = None
 
+
 def partial_cos_sim(query_vec, doc_vec, doc_mod):
+    ''' Calculates the cosine similarity between two vectors. 
+    Parameters : 
+        query_vec - numpy weight vector for query
+        doc_vec - numpy weight vector for document
+        doc_mod - precomputed document weight vector modulus
+    '''
 
     query_mod = query_vec.dot(query_vec) ** 0.5
     dot_product = query_vec.dot(doc_vec)
@@ -25,6 +36,13 @@ def partial_cos_sim(query_vec, doc_vec, doc_mod):
 
 
 def search_query(query):
+    ''' Preprocesses the query to generate terms, and uses these 
+    terms to find the top 10 documents with largest cosine
+    similarity. 
+    Parameters :
+        query - string
+    '''
+
     global vocab_json, json_list
 
     DATASET_DIRECTORY_NAME = "lyrics-dataset"

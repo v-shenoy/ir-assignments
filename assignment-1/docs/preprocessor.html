@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module preprocessor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>preprocessor</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/vighneshq/Documents/ir/assignment-1/preprocessor.py">/home/vighneshq/Documents/ir/assignment-1/preprocessor.py</a></font></td></tr></table>
+    <p><tt>Module&nbsp;responsibly&nbsp;for&nbsp;preprocessing&nbsp;documents&nbsp;to&nbsp;save&nbsp;computational<br>
+power&nbsp;on&nbsp;newer&nbsp;runs.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+<a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="string.html">string</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-generate_terms"><strong>generate_terms</strong></a>(doc_text)</dt><dd><tt>Generates&nbsp;the&nbsp;list&nbsp;of&nbsp;terms&nbsp;(including&nbsp;biwords)&nbsp;for&nbsp;a&nbsp;given&nbsp;document.&nbsp;<br>
+Punctuation&nbsp;is&nbsp;removed,&nbsp;then&nbsp;the&nbsp;words&nbsp;are&nbsp;stemmed&nbsp;using&nbsp;Porter's&nbsp;stemmer.&nbsp;<br>
+Parameters&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;doc_text&nbsp;-&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-save_weight"><strong>save_weight</strong></a>(vocab_json_)</dt><dd><tt>Saves&nbsp;the&nbsp;modulus&nbsp;of&nbsp;the&nbsp;weight-vector&nbsp;for&nbsp;a&nbsp;given&nbsp;document.&nbsp;<br>
+This&nbsp;helps&nbsp;speed&nbsp;up&nbsp;the&nbsp;searches&nbsp;because&nbsp;it&nbsp;doesn't&nbsp;have&nbsp;to&nbsp;be&nbsp;recomputed.&nbsp;<br>
+Paramters&nbsp;-&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;vocab_json&nbsp;-&nbsp;dictionary&nbsp;with&nbsp;(Term,&nbsp;Document&nbsp;Freq)&nbsp;pairs</tt></dd></dl>
+</td></tr></table>
+</body></html>

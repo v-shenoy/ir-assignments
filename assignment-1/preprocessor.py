@@ -1,3 +1,6 @@
+''' Module responsibly for preprocessing documents to save computational
+power on newer runs. '''
+
 import string
 import os
 import json
@@ -10,6 +13,12 @@ from nltk.stem.porter import PorterStemmer
 
 
 def generate_terms(doc_text):
+    ''' Generates the list of terms (including biwords) for a given document. 
+    Punctuation is removed, then the words are stemmed using Porter's stemmer. 
+    Parameters -
+        doc_text - string
+    '''
+
     table = dict((ord(char), "") for char in string.punctuation)
     doc_text = doc_text.translate(table)
 
@@ -27,6 +36,12 @@ def generate_terms(doc_text):
 
 
 def save_weight(vocab_json_):
+    ''' Saves the modulus of the weight-vector for a given document. 
+    This helps speed up the searches because it doesn't have to be recomputed. 
+    Paramters - 
+        vocab_json - dictionary with (Term, Document Freq) pairs
+    '''
+
     corpus = os.listdir(os.getcwd())
     corpus_size = len(corpus)
 
@@ -57,7 +72,9 @@ def save_weight(vocab_json_):
 
 
 if __name__ == "__main__":
-
+    ''' Calculates (Term, Freq) pairs for each document, and saves it 
+    along with the document's JSON file. ''' 
+    
     DATASET_DIRECTORY_NAME = "lyrics-dataset"
 
     if not os.path.isdir(os.path.join(os.getcwd(), DATASET_DIRECTORY_NAME)):

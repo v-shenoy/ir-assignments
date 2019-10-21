@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>search</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/vighneshq/Documents/ir/assignment-1/search.py">/home/vighneshq/Documents/ir/assignment-1/search.py</a></font></td></tr></table>
+    <p><tt>Module&nbsp;responsibly&nbsp;for&nbsp;performing&nbsp;the&nbsp;search&nbsp;using&nbsp;the&nbsp;query,<br>
+and&nbsp;the&nbsp;cosine&nbsp;similarity&nbsp;measure.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="heapq.html">heapq</a><br>
+<a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="math.html">math</a><br>
+<a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="preprocessor.html">preprocessor</a><br>
+</td><td width="25%" valign=top><a href="string.html">string</a><br>
+<a href="sys.html">sys</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-partial_cos_sim"><strong>partial_cos_sim</strong></a>(query_vec, doc_vec, doc_mod)</dt><dd><tt>Calculates&nbsp;the&nbsp;cosine&nbsp;similarity&nbsp;between&nbsp;two&nbsp;vectors.&nbsp;<br>
+Parameters&nbsp;:&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;query_vec&nbsp;-&nbsp;numpy&nbsp;weight&nbsp;vector&nbsp;for&nbsp;query<br>
+&nbsp;&nbsp;&nbsp;&nbsp;doc_vec&nbsp;-&nbsp;numpy&nbsp;weight&nbsp;vector&nbsp;for&nbsp;document<br>
+&nbsp;&nbsp;&nbsp;&nbsp;doc_mod&nbsp;-&nbsp;precomputed&nbsp;document&nbsp;weight&nbsp;vector&nbsp;modulus</tt></dd></dl>
+ <dl><dt><a name="-search_query"><strong>search_query</strong></a>(query)</dt><dd><tt>Preprocesses&nbsp;the&nbsp;query&nbsp;to&nbsp;generate&nbsp;terms,&nbsp;and&nbsp;uses&nbsp;these&nbsp;<br>
+terms&nbsp;to&nbsp;find&nbsp;the&nbsp;top&nbsp;10&nbsp;documents&nbsp;with&nbsp;largest&nbsp;cosine<br>
+similarity.&nbsp;<br>
+Parameters&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;query&nbsp;-&nbsp;string</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>json_list</strong> = None<br>
+<strong>vocab_json</strong> = None</td></tr></table>
+</body></html>

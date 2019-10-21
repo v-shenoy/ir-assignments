@@ -1,3 +1,6 @@
+''' Module responsible for scraping information about songs
+from the internet. '''
+
 import string
 import time
 import os
@@ -8,7 +11,9 @@ from bs4 import BeautifulSoup
 
 
 if __name__ == "__main__":
-
+    ''' Scrape genius.com using beautiful soup recursively to 
+    save song information. '''
+    
     ARTIST_PAGE_URL = "https://genius.com/artists-index/"
     DATASET_DIRECTORY_NAME = "lyrics-dataset"
 
